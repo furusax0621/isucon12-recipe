@@ -9,10 +9,9 @@ sudo truncate -s 0 -c /var/log/nginx/access.log
 # 各種サービスの再起動
 echo
 echo ":: RESTART SERVICES       ====>"
-# TODO: 大会用のアプリケーション・ミドルウェアに合わせて書き換える
-# sudo systemctl restart mysql
-# sudo systemctl restart isucon.go
-# sudo systemctl restart nginx
+sudo systemctl restart mysql
+sudo systemctl restart isuports.service
+sudo systemctl restart nginx
 
 # スロークエリログの収集開始
 echo
